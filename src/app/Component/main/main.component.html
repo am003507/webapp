@@ -1,0 +1,26 @@
+<div [ngClass]="'outer'" class="alert alert-primary" role="alert">
+
+  <div [ngClass]="'navigator'">
+
+      <nav class="nav nav-pills nav-fill" >
+          <a class="nav-item nav-link active"   > <<< </a>
+          <a class="nav-item nav-link active"   > >>> </a>
+
+        </nav>
+
+    <app-directory-tree
+      [pathToken] ="pathToken"
+      [rootDir]="rootDir"
+      (sendObject)="onRecvFunc($event)"
+    ></app-directory-tree>
+  </div>
+  <div [ngClass]="'list'">
+    <app-file-list
+      [pathToken]="pathToken"
+      [curPath]="curPath"
+      [rootDir]="rootDir"
+    ></app-file-list>
+  </div>
+</div>
+
+

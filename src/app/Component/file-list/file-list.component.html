@@ -1,0 +1,57 @@
+<div style="height:10%">
+
+  <div style="float:left;width: 100%;">
+    <div class="alert alert-danger" role="alert">
+      <br>
+      현재 디렉토리
+      <div>
+        <nav>
+        <input #EL_pathInput type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          (keypress)="eventHandler($event)" style="width:90%;float:left">
+
+          <button type="button" class="btn btn-primary" (click)="enterDir()"  >>>>></button>
+
+      </nav>
+      </div>
+    </div>
+
+  </div>
+</div>
+<br>
+<br>
+<div class="alert alert-danger" role="alert" style="height:80%" (contextmenu)="conetxtBackground($event)">
+
+  <div style="float:left; width:100%;height:100%;">
+
+
+    <div style="width:100%;float:left;height:80%;overflow-y: scroll;">
+
+      <table class="table">
+        <thead>
+          <tr style="background-color:red">
+            <th scope="col" (click)="sortTable('name')">파일명</th>
+            <th scope="col" (click)="sortTable('lastModifiedTime')">수정한 날짜</th>
+            <th scope="col" (click)="sortTable('type')">유형</th>
+            <th scope="col" (click)="sortTable('size')">크기</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of rows;let i = index"  (dblclick)="TableDoubleClick(i)" >
+            <td  ><p (contextmenu)="contextClick($event,i)">{{row.name}} </p></td>
+            <td (contextmenu)="contextClick($event,i)">{{row.lastModifiedTime}}</td>
+            <td (contextmenu)="contextClick($event,i)">{{row.type}}</td>
+            <td (contextmenu)="contextClick($event,i)">{{row.size}}{{row.sizeType}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<div #EL_apiAlert class="alert alert-warning alert-dismissible fade {{apiAlertClass}}" style="position:fixed;top:70px;width:48%" role="alert">
+  <strong  style="color:red">경고 </strong> You should check in on some of those fields below.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true" (click)="hideAlert()">&times;</span>
+  </button>
+</div>

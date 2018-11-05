@@ -1,0 +1,12 @@
+<div style="height:100%" class="alert alert-success" role="alert">
+
+
+    <tree-root #tree [nodes]="nodes" [options]="options"
+               (toggleExpanded)="tree_toggleExpanded($event)"
+               (activate)="tree_activate($event)"
+               (focus)="tree_focus($event)"
+               (blur)="tree_blr($event)"
+               (contextmenu)="tree_context_test($event)"
+               >
+    </tree-root>
+</div>

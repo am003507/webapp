@@ -1,0 +1,26 @@
+div.outer {
+   height: 100%;
+   margin-left:13%;
+   margin-right:13%;
+
+
+  
+  }
+
+div.navigator{
+  padding-top:2%;
+  height:94%;
+  width: 20%;
+  float: left;
+
+}
+div.list{
+  height:100%;
+  width:70%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+
+
+  float:left;
+}

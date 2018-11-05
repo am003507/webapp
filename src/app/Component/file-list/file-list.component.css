@@ -1,0 +1,22 @@
+.card_btn{
+  width:96%;
+  margin: 2%;
+
+}
+
+.cardView{
+  width:90%;
+  visibility:hidden;
+  margin: 10px;
+
+
+}
+
+tr:hover{
+  background-color: rgba(255, 95, 102, 0.33);
+}
+
+tr:active{
+  background-color: rgba(255, 112, 218, 0.33);
+}
+
